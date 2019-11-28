@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-@WebServlet(name = "AreaCheckServlet", urlPatterns = "validate")
 public class AreaCheckServlet extends HttpServlet {
     ArrayList<Coordinate> coordinatesCollection = new ArrayList<>();
 
@@ -21,9 +20,6 @@ public class AreaCheckServlet extends HttpServlet {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss"); //Для обработки времени
         System.out.println("Принимаем данные в AreaCheckServlet..."); //СТ, которая говорит о том, что мы попали в AreaCheck
         System.out.println("Входные данные: ");
-
-
-
 
 
         double startTime = System.nanoTime(); //Начало выполнения скрипта
@@ -38,7 +34,6 @@ public class AreaCheckServlet extends HttpServlet {
         System.out.println("X после округления: " + x);
         y = Math.round(y * 100) / 100.0;
         System.out.println("X после округления: " + y);
-
 
 
         double pixelX = x * (100 / 3.0);
@@ -76,9 +71,8 @@ public class AreaCheckServlet extends HttpServlet {
         coordinatesCollection.add(coordinate); //Кладём в коллекцию наш объект с координатами
         context.setAttribute("userData", coordinatesCollection);//сохраняем в контексте коллекцию с точками
 
-
-
         getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
+//        response.sendRedirect(request.getContextPath() + "/result.jsp");
 
 
     }

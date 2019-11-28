@@ -1,6 +1,6 @@
 package servlets;
 
-public class Coordinate {
+public class Coordinate { //Просто класс для хранения данных о точке
 
     private double x;
     private double y;

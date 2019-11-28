@@ -34,8 +34,8 @@
         <canvas id="circlesCanvas" width="250" height="250">У вас не поддерживает canvas!</canvas>
     </div>
 
-    <%--//todo удалить с кнопки, сделать eventlist--%>
-    <form action="controller" onsubmit="return validate();" method="post" id="form">
+    <%--todo удалить с кнопки, сделать eventlist--%>
+    <form action="validate" onsubmit="return validate();" method="post" id="form">
         <!-- Тут изменить отправку на др страницу -->
 
 

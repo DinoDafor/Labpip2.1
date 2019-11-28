@@ -220,7 +220,7 @@ function check() { //todo сделать нейминг
 function createFormForCanvas(x, y, r) {
 //todo сделать hidden или типо того
     let form = document.createElement('form');
-    form.action = "controller";
+    form.action = "validate";
     form.method = "POST";
     form.hidden=true;
     form.innerHTML = "<input name= 'x' value=\"" + x + "\">" + "<input name= 'y' value=\"" + y + "\">" + "<input name= 'r' value=\"" + r + "\">";// + '<input name="y" value="1" id="yC">' + '<input name="r" value="1" id="rC" >";

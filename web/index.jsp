@@ -29,8 +29,8 @@
     <canvas id="circlesCanvas" width="250" height="250">У вас не поддерживает canvas!</canvas>
   </div>
 
-
-  <form action="controller" onsubmit="return validate();" method="post" id="form">
+<%-- todo Сделать функцию на слушителя --%>
+  <form action="validate" onsubmit="return validate();" method="post" id="form">
     <!-- Тут изменить отправку на др страницу -->
 
 
